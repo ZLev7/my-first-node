@@ -1,4 +1,4 @@
-console.log("Client side js has been run!!!")
+
 
 fetch('http://puzzle.mead.io/puzzle').then((response) => {
     response.json().then((data) => {
