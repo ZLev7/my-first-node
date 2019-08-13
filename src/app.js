@@ -55,7 +55,7 @@ app.get('/weather', (req, res) => {
                 error: error
             })
         }
-        forecast(lattitude, longitude, (error, { summary, temperature, timeZone, visibility } = {}) => {
+        forecast(lattitude, longitude, (error, { summary, temperature, timeZone, visibility, apparentTemperature } = {}) => {
             if(error){
                 return res.send({
                     error: error
@@ -65,7 +65,8 @@ app.get('/weather', (req, res) => {
                 summary,
                 temperature,
                 timeZone,
-                visibility
+                visibility,
+                apparentTemperature
             })
           })
     })

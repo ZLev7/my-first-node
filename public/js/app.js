@@ -23,7 +23,7 @@ weatherFrom.addEventListener('submit', (e) => {
             if(data.error){
                 return messageTwo.textContent = data.error
             }
-            messageOne.textContent = data.summary;
+            messageOne.textContent = data.summary + ' ' + data.apparentTemperature;
             messageTwo.textContent = data.timeZone;
         })
     })
